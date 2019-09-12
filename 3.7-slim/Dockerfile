@@ -24,10 +24,10 @@ RUN apt-get update \
 RUN pip install numpy
 
 WORKDIR /
-ENV OPENCV_VERSION="4.1.0"
-RUN wget https://github.com/Itseez/opencv/archive/${OPENCV_VERSION}.zip -O opencv.zip \
+ENV OPENCV_VERSION="4.1.1"
+RUN wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip -O opencv.zip \
   && unzip opencv.zip \
-  && wget https://github.com/Itseez/opencv_contrib/archive/${OPENCV_VERSION}.zip -O opencv_contrib.zip \
+  && wget https://github.com/opencv/opencv_contrib/archive/${OPENCV_VERSION}.zip -O opencv_contrib.zip \
   && unzip opencv_contrib \
   && mkdir /opencv-${OPENCV_VERSION}/cmake_binary \
   && cd /opencv-${OPENCV_VERSION}/cmake_binary \
